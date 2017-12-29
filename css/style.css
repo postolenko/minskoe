@@ -679,11 +679,11 @@ button.green-pill:hover {
 }
 
 .header-site .col-1 {
-    width: 23%;
+    width: 22%;
 }
 
 .header-site .col-2 {
-    width: 42%;
+    width: 43%;
 }
 
 .header-site .col-3 {
@@ -712,12 +712,14 @@ button.green-pill:hover {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    padding: 0 16px;
+    margin: 5px 0 5px 15px;
+    padding-right: 17px;
 }
 
-.menu-item:before {
-    display: block;
-    opacity: 0;
+.menu-item .wt-tr {
+    /*display: block;*/
+    /*opacity: 0;*/
+    display: none;
     content: "";
     width: 15px;
     height: 15px;
@@ -730,29 +732,35 @@ button.green-pill:hover {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transition-property: opacity;
-    -webkit-transition-duration: .2s;
+/*    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
     -moz-transition-property: opacity;
-    -moz-transition-duration: .2s;
+    -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
     -ms-transition-property: opacity;
-    -ms-transition-duration: .2s;
+    -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
     -o-transition-property: opacity;
-    -o-transition-duration: .2s;
+    -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
     transition-property: opacity;
-    transition-duration: .2s;
-    transition-timing-function: ease;
+    transition-duration: .3s;
+    transition-timing-function: ease;*/
 }
 
-.menu-item.active:before {
-    opacity: 1;
+.menu-item.active .wt-tr {
+    /*opacity: 1;*/
+    display: block;
+}
+
+.menu-item:hover .wt-tr {
+    /*opacity: 1;*/
+    display: block;
 }
 
 .menu-item a.item-txt {
@@ -807,7 +815,7 @@ button.green-pill:hover {
     cursor: pointer;
     position: absolute;
     top: 5px;
-    right: -2px;
+    right: 1px;
     -webkit-transition-property: transform;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -841,6 +849,7 @@ button.green-pill:hover {
     left: -1px;
 }
 
+.menu-item:hover .dropdown-btn,
 .menu-item.active .dropdown-btn {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
@@ -852,13 +861,41 @@ button.green-pill:hover {
     vertical-align: top;
     display: none;
     min-width: 188px;
-    background: #ffffff;
-    padding: 12px 19px 14px 19px;
+    padding-top: 15px;
     position: absolute;
     top: 100%;
     left: 0;
+
+/*    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;*/
+}
+
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu > .inner {
+    background: #ffffff;
+    padding: 12px 19px 14px 19px;
     text-align: left;
-    margin-top: 15px;
+    padding-top: 15px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1048,6 +1085,11 @@ button.green-pill:hover {
     position: absolute;
     bottom: 23%;
     left: 0;
+}
+
+.main-slider_wrapp .pagination-append .slick-dots {
+    margin: 0;
+    text-align: left;
 }
 
 .thumbnails_1 {
@@ -1358,12 +1400,12 @@ button.green-pill:hover {
 }
 
 .footer .row-1 .col-1 {
-    width: 34%;
+    width: 33%;
     padding-right: 1%;
 }
 
 .footer .row-1 .col-2 {
-    width: 66%;
+    width: 67%;
     padding-top: 4px;
     padding-left: 1%;
 }
@@ -1388,15 +1430,16 @@ button.green-pill:hover {
 }
 
 .footer p {
-    padding: 5px 0 4px 0;
-    line-height: 19px;
+    padding: 6px 0 4px 0;
+    font-size: 15px;
+    line-height: 19px;    
     color: #fefefe;
 }
 
 .footer a {
     font-family: "Circe", Arial, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 15px;
+    line-height: 15px;
     font-weight: normal;
     color: #fefefe;
 
@@ -1450,7 +1493,7 @@ button.green-pill:hover {
 }
 
 .footer .row-2 {
-    padding: 20px 0 22px 0;
+    padding: 21px 0 21px 0;
     border-top: 1px solid #444444;
 }
 
@@ -1461,7 +1504,7 @@ button.green-pill:hover {
 .seo-text_wrapp .seo-text {
     display: inline-block;
     vertical-align: top;
-    width: 32%;
+    width: 31%;
 }
 
 .seo-text {
@@ -1474,8 +1517,8 @@ button.green-pill:hover {
 
 .seo-text li a {
     font-family: "Circe", Arial, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 15px;
+    line-height: 15px;
     font-weight: normal;
     color: #fefefe;
 
@@ -1558,7 +1601,7 @@ a.tel-big:hover {
     color: #86bc49;
 }
 
-.p-copy {
+p.p-copy {
     padding-right: 2%;
     font-size: 14px;
 }
