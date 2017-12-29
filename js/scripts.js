@@ -10,6 +10,18 @@ $(window).load(function() {
 
     });
 
+    $(".h2").each(function() {
+
+        var shapeH = $(this).find(".shape");
+
+        var hTitle = $(this).find("h2");
+
+        shapeH.css({
+            "width" : ( $(this).width() - hTitle.outerWidth() ) / 2 + "px"
+        });
+
+    });
+
 });
 
 $(document).ready(function() {
@@ -26,7 +38,7 @@ $(document).ready(function() {
    
     $(window).resize(function() {
 
-        
+        getTitleParams();
 
     });
 
@@ -105,5 +117,21 @@ $(document).ready(function() {
         });
 
     });
+
+    function getTitleParams() {
+
+        $(".h2").each(function() {
+
+            var shapeH = $(this).find(".shape");
+
+            var hTitle = $(this).find("h2");
+
+            shapeH.css({
+                "width" : ( $(this).width() - hTitle.outerWidth() ) / 2 + "px"
+            });
+
+        });
+
+    }
 
 });
