@@ -1070,7 +1070,7 @@ button.green-pill:hover {
     color: #86bc49;
 }
 
-.dropdown-btn:before {
+.light .dropdown-btn:before {
     color: #313131;
 }
 
