@@ -124,8 +124,8 @@ $(document).ready(function() {
 
         var tabsName;
         var activeTabName;
-        var prevTabHeight;
-        var activeTabHeight;
+        // var prevTabHeight;
+        // var activeTabHeight;
         var activeFlag = false;
 
         $(".tabs_1-nav").each( function() {
@@ -180,7 +180,7 @@ $(document).ready(function() {
                         "display" : "block"
                     });
 
-                prevTabHeight = $(this).height();
+                // prevTabHeight = $(this).height();
 
             } else {
 
@@ -191,9 +191,9 @@ $(document).ready(function() {
 
         });
 
-        $(".tabs-content[data-tabs = '"+tabsName+"']").css({
-            "height" : prevTabHeight + "px"
-        });
+        // $(".tabs-content[data-tabs = '"+tabsName+"']").css({
+        //     "height" : prevTabHeight + "px"
+        // });
 
 
         $(".tabs_1-nav .tab-link").click(function(e) {
@@ -236,31 +236,123 @@ $(document).ready(function() {
 
                 var activeTabName = $(this).attr("data-tab-link");
 
-                $(".tabs-content[data-tabs = '"+tabsName+"']").find(".tab").each(function() {
+                // $(".tabs-content[data-tabs = '"+tabsName+"']").find(".tab").each(function() {
 
-                    if( $(this).is(":visible") ) {
+                //     if( $(this).is(":visible") ) {
 
-                        prevTabHeight = $(this).height();
+                //         prevTabHeight = $(this).height();
 
-                    }
+                //     }
 
-                });
+                // });
 
                 $(".tabs-content[data-tabs = '"+tabsName+"']").find(".tab").each(function() {
 
                     if( $(this).attr("data-tab") == activeTabName ) {
 
-                        $(this).fadeIn(200);
+                        // $(this).fadeIn(200);
 
-                        var activeTabHeight = $(this).height();
+                        $(this).css({
+                            "display" : "block"
+                        });
 
-                        $(this).closest(".tabs-content").delay(150).animate({
-                            "height" : activeTabHeight + "px"
-                        }, 300);
+                        // var activeTabHeight = $(this).height();
+
+                        // $(this).closest(".tabs-content").delay(150).animate({
+                        //     "height" : activeTabHeight + "px"
+                        // }, 300);
 
                     } else {
 
-                        $(this).fadeOut(200);
+                        // $(this).fadeOut(200);
+
+                        $(this).css({
+                            "display" : "none"
+                        });
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    });
+
+    $(function() {
+
+        var activeTabName;
+
+        $(".tabs_2").each(function() {
+
+            $(this).find(".tab_2-pill").each(function() {
+
+                if( $(this).hasClass("active")  ) {
+
+                    activeTabName = $(this).attr("for");
+
+                    activeFlag = true;
+
+                    return false;
+
+                } else {
+
+                    activeFlag = false;
+
+                }
+
+            });
+
+            if( activeFlag == false ) {
+
+                activeTabName = $(this).find(".tab_2-pill").eq(0).attr("for");
+
+                $(this).find(".tab_2-pill").eq(0).addClass("active");
+
+            }
+
+            $(this).find(".tabradio").each(function() {
+
+                if( $(this).attr("id") == activeTabName ) {
+
+                    $(this).click();
+
+                    return false;
+
+                }
+
+            });
+
+        });
+
+        $(".tab_2-pill").click(function() {
+
+            if( !$(this).hasClass("active") ) {
+
+                var parentBlock = $(this).closest(".tabs_2");
+
+                activeTabName = $(this).attr("for");
+
+                $(this).addClass("active");
+
+                parentBlock.find(".tab_2-pill").each(function() {
+
+                    if( $(this).attr("for") != activeTabName ) {
+
+                        $(this).removeClass("active");
+
+                    }
+
+                });
+
+                parentBlock.find(".tabradio").each(function() {
+
+                    if( $(this).attr("id") == activeTabName ) {
+
+                        $(this).click();
+
+                        return false;
 
                     }
 
