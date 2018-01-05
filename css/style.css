@@ -238,6 +238,10 @@ h1 {
     color: #2c1b08;
 }
 
+h1 + p {
+    padding-top: 11px;
+}
+
 h2 {
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 36px;
@@ -1385,8 +1389,7 @@ button.green-pill.big {
 
 .two-cols-templ .col-1 {
     width: 68%;
-    padding-top: 32px;
-    padding-right: 2%;
+    padding-right: 11%;
 }
 
 .two-cols-templ .col-2 {
@@ -1396,7 +1399,7 @@ button.green-pill.big {
 .logo-two-cols {
     display: table;
     width: 100%;
-    margin-bottom: 18px;
+    margin: 32px 0 18px 0;
 }
 
 .logo-col-1 {
@@ -1468,13 +1471,23 @@ button.green-pill.big {
     -webkit-text-fill-color: transparent;
 }
 
-.slider-2_wrapp {
+.sidebar {
     padding: 27px 0 14px 0;
     background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 1, .05);
+    -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 1, .05);
     box-shadow: 0 8px 20px 0 rgba(0, 0, 1, .05);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+}
+
+.sidebar .inner {
+    padding: 0 30px;
+}
+
+.slider-2_wrapp {
+
 }
 
 .slider-2_wrapp .bottom-row {
@@ -1482,13 +1495,12 @@ button.green-pill.big {
 }
 
 .slider-2 {
-    padding: 0 30px;
-    border-bottom: 1px solid #f3f3f3;
+    /*border-bottom: 1px solid #f3f3f3;*/
 }
 
 .slider-2 .slick-dots {
     text-align: left;
-    margin: 25px 0 25px -8px;
+    margin: 5px 0 25px -8px;
 }
 
 .slider-2 .slide {
@@ -1499,16 +1511,35 @@ button.green-pill.big {
     padding-bottom: 13px;
 }
 
-.slider-2 p {
-    padding: 11px 0;
+.single-thumb {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 16px 0 20px 0;
+}
+
+.single-thumb:last-child {
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.slider-2 .single-thumb {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+.single-thumb p {
+    padding: 0 0 12px 0;
     line-height: 20px;
 }
 
-.grey-txt {
+.grey {
     color: #868686;
 }
 
-.slider-2 .img-box {
+.date {
+    color: #868686;
+}
+
+.single-thumb .img-box {
     height: 168px;
     overflow: hidden;
     position: relative;
@@ -1518,7 +1549,7 @@ button.green-pill.big {
     border-radius: 3px;
 }
 
-.slider-2 .img-box img {
+.single-thumb .img-box img {
     display: block;
     width: auto;
     height: auto;
@@ -1530,6 +1561,11 @@ button.green-pill.big {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.sidebar .bottom-row {
+    border-top: 1px solid #f3f3f3;
+    padding-top: 15px;
 }
 
 /*-- /Section 3 - Main Page --*/
@@ -2320,6 +2356,25 @@ input.tabradio:checked + .tab_2-tab {
 }
 
 /*-- /Section 1 - Direction Scot Page --*/
+
+.article-3 {
+
+}
+
+.article-3 img {    
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    background-color: #dddddd;
+}
+
+.article-3 h4 {
+    padding: 21px 0;
+}
+
+.article-3 p {
+    padding: 15px 0;
+}
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */

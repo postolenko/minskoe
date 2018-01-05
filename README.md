@@ -4,3 +4,4 @@
 # http://postolenko.github.io/minskoe/contacts.html
 # http://postolenko.github.io/minskoe/direction_scot.html
 # http://postolenko.github.io/minskoe/direction_scot_page.html
+# http://postolenko.github.io/minskoe/new_page.html
