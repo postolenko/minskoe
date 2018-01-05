@@ -2357,6 +2357,8 @@ input.tabradio:checked + .tab_2-tab {
 
 /*-- /Section 1 - Direction Scot Page --*/
 
+/*-- Section 1 - New Page --*/
+
 .article-3 {
 
 }
@@ -2375,6 +2377,28 @@ input.tabradio:checked + .tab_2-tab {
 .article-3 p {
     padding: 15px 0;
 }
+
+/*-- /Section 1 - New Page --*/
+
+/*-- Section 1 - News Page --*/
+
+.thumb-7 {
+
+}
+
+.thumb-7 .img-box {
+
+}
+
+.thumb-7 p {
+
+}
+
+.thumb-7 .date {
+
+}
+
+/*-- /Section 1 - News Page --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
