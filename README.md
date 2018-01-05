@@ -7,3 +7,4 @@
 # http://postolenko.github.io/minskoe/new_page.html
 # http://postolenko.github.io/minskoe/news.html
 # http://postolenko.github.io/minskoe/vacansy.html
+# http://postolenko.github.io/minskoe/offers.html
