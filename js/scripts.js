@@ -364,6 +364,52 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        var slidingBox;
+
+        $(".sliding-block_wrapp").each(function() {
+
+            slidingBox = $(this).find(".sliding-box");
+
+            if( $(this).hasClass("active") ) {
+
+                slidingBox.css({
+                    "display" : "block"
+                });
+
+            } else {
+
+                slidingBox.css({
+                    "display" : "none"
+                });
+
+            }
+
+        });
+
+        $(".sliding-block-header").click(function() {
+
+            parentBlock = $(this).closest(".sliding-block_wrapp");
+
+            slidingBox = parentBlock.find(".sliding-box");
+
+            if( slidingBox.is(":hidden") ) {
+
+                slidingBox.slideDown(300);
+                parentBlock.addClass("active");
+
+            } else {
+
+                slidingBox.slideUp(300);
+                parentBlock.removeClass("active");
+
+            }
+
+        });
+
+    });
+
     function getTitleParams() {
 
         $(".h2").each(function() {

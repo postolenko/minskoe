@@ -299,10 +299,18 @@ h3 {
 
 h4 {
     font-family: "Circe", Arial, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 25px;
     font-weight: bold;
     color: #2c1b08;
+}
+
+h5 {
+    font-family: "Circe", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #000000;
 }
 
 p {
@@ -315,6 +323,11 @@ p {
 
 li {
     list-style: none;
+    font-family: "Circe", Arial, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #000000;
 }
 
 a {
@@ -778,6 +791,17 @@ button.green-pill.big {
 
 .vegetables.active {
     background-image: url(../img/vegetables_active.svg);
+}
+
+.clip {
+    display: inline-block;
+    vertical-align: top;
+    width: 9px;
+    height: 18px;
+    background-image: url(../img/clip.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 /*-- Icons --*/
@@ -2430,6 +2454,203 @@ input.tabradio:checked + .tab_2-tab {
 }
 
 /*-- /Section 1 - News Page --*/
+
+/*-- Section 1 - Vacansy Page --*/
+
+.slidings-blocks {
+    margin: 1px 0 37px 0;
+}
+
+.sliding-block_wrapp {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.sliding-block_wrapp:last-child {
+    border-bottom: none;
+}
+
+.sliding-block-header {
+    display: table;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 0 13px 0;
+}
+
+.header-col-1 {
+    display: table-cell;
+    vertical-align: top;
+    width: 34px;
+    padding-top: 2px;
+}
+
+.header-col-2 {
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+}
+
+.header-col-2 .inner-col-1 {
+    width: 50%;
+}
+
+.header-col-2 .inner-col-2 {
+    width: 50%;
+    text-align: right;
+}
+
+.slide-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #e9e9e9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.slide-btn:after {
+    content: "\f107";
+    font-family: 'FontAwesome';
+    color: #cccccc;
+}
+
+.active .slide-btn,
+.slide-btn.active {
+    border: 1px solid #85bc47;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.active .slide-btn:after,
+.slide-btn.active:after {
+    color: #85bc47;
+}
+
+.sliding-block-header h3 {
+    font-family: "Circe", Arial, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #2c1b08;
+}
+
+.sliding-block-header p.price {
+    padding: 0;
+    font-family: "Circe", Arial, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #82ba43;
+}
+
+.sliding-box {
+    padding: 15px 0 10px 34px;
+}
+
+.sliding-box h5 {
+    padding: 1px 0;
+}
+
+.sliding-box p {
+    padding: 1px 0 !important;
+}
+
+.sliding-box ul {
+    margin: 3px 0;
+}
+
+.sliding-box .green-pill {
+    min-width: 186px;
+    margin: 23px 0;
+}
+
+.form_2 {
+    padding: 9px 30px 22px 30px;
+    border: 2px solid #e8e8e8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.form_2 h2 {
+    padding: 19px 0;
+    font-family: "Circe", Arial, Verdana, sans-serif;
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: normal;
+    color: #624524;
+}
+
+.form_2 label {
+    display: block;
+    padding: 0 0 7px 0;
+}
+
+.upload-block {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+    margin: 3px 0;
+}
+
+.upload-block input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/*.upload-file {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}*/
+
+.upload-file i {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 3px;
+    margin: 0 9px 0 0;
+}
+
+.upload-file p {
+    display: inline-block;
+    vertical-align: top;
+    color: #82ba43;
+}
+
+.form_2 .submit {
+    margin: 17px 0;
+}
+
+/*-- /Section 1 - Vacansy Page --*/
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
