@@ -2349,7 +2349,7 @@ p.icon-p a:hover {
     color: #2c1b08;
 }
 
-.tab-nav_btn {
+button.tab-nav_btn {
     /*display: inline-block;*/
     display: none;
     vertical-align: top;

@@ -430,7 +430,7 @@
 		background: rgba(0, 0, 255, .2);
 	}
 
-	.tab-nav_btn {
+	button.tab-nav_btn {
 		display: inline-block;
 	}
 
