@@ -920,9 +920,8 @@ textarea:focus {
 
 .logo img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
 }
 
 .logo img.logo-inner {
@@ -1600,9 +1599,8 @@ textarea:focus {
 
 .logo-2 img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
 }
 
 .logo-two-cols p {
@@ -2936,9 +2934,8 @@ input.tabradio:checked + .tab_2-tab {
 
 .logo-footer img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
 }
 
 .footer .row-2 {
