@@ -1,8 +1,12 @@
 $(window).load(function() {
 
+    var parentBlock;
+    var shapeH;
+    var hTitle;
+
     $("select").each(function() {
 
-        var parentBlock = $(this).closest(".select-block");
+        parentBlock = $(this).closest(".select-block");
 
         parentBlock.find(".select2-container").css({
             "width" : parentBlock.width() + "px"
@@ -12,9 +16,9 @@ $(window).load(function() {
 
     $(".h2").each(function() {
 
-        var shapeH = $(this).find(".shape");
+        shapeH = $(this).find(".shape");
 
-        var hTitle = $(this).find("h2");
+        hTitle = $(this).find("h2");
 
         shapeH.css({
             "width" : ( $(this).width() - hTitle.outerWidth() ) / 2 + "px"
@@ -35,6 +39,33 @@ $(document).ready(function() {
     var parentBlock;
     var dropdownBtn;
     var dropdownMenu;
+
+    // ------
+
+    var tabsName;
+    var activeTabName;
+    var activeFlag = false;
+
+    // ------
+
+    var parentItem;
+    var tabLink;
+    var tabsName;
+    var activeTabName;
+
+    // ------
+
+    var activeTabName;
+
+    // ------
+
+    var slidingBox;
+
+    // ------
+
+    var tabsNav;
+
+    // ------
 
     getRespParams();
    
@@ -74,11 +105,9 @@ $(document).ready(function() {
 
     $(function() {
 
-        var tabsName;
-        var activeTabName;
-        // var prevTabHeight;
-        // var activeTabHeight;
-        var activeFlag = false;
+        // var tabsName;
+        // var activeTabName;
+        // var activeFlag = false;
 
         $(".tabs_1-nav").each( function() {
 
@@ -132,8 +161,6 @@ $(document).ready(function() {
                         "display" : "block"
                     });
 
-                // prevTabHeight = $(this).height();
-
             } else {
 
                 $(this).css({
@@ -143,11 +170,6 @@ $(document).ready(function() {
 
         });
 
-        // $(".tabs-content[data-tabs = '"+tabsName+"']").css({
-        //     "height" : prevTabHeight + "px"
-        // });
-
-
         $(".tabs_1-nav .tab-link").click(function(e) {
 
             e.preventDefault();
@@ -156,7 +178,7 @@ $(document).ready(function() {
 
                 parentBlock = $(this).closest(".tabs-nav");
 
-                var parentItem = $(this).closest("li");
+                parentItem = $(this).closest("li");
 
                 parentItem.find(".slidedown_wrapp").slideDown(200);
 
@@ -174,7 +196,7 @@ $(document).ready(function() {
 
                 parentBlock.find(".slidedown_wrapp").each( function(){
 
-                    var tabLink = $(this).closest("li").find(".tab-link");
+                    tabLink = $(this).closest("li").find(".tab-link");
 
                     if( !tabLink.hasClass("active") && $(this).is(":visible") ) {
 
@@ -184,39 +206,19 @@ $(document).ready(function() {
 
                 });
 
-                var tabsName = $(this).closest(".tabs_1-nav ").attr("data-tabs-nav");
+                tabsName = $(this).closest(".tabs_1-nav ").attr("data-tabs-nav");
 
-                var activeTabName = $(this).attr("data-tab-link");
-
-                // $(".tabs-content[data-tabs = '"+tabsName+"']").find(".tab").each(function() {
-
-                //     if( $(this).is(":visible") ) {
-
-                //         prevTabHeight = $(this).height();
-
-                //     }
-
-                // });
+                activeTabName = $(this).attr("data-tab-link");
 
                 $(".tabs-content[data-tabs = '"+tabsName+"']").find(".tab").each(function() {
 
                     if( $(this).attr("data-tab") == activeTabName ) {
 
-                        // $(this).fadeIn(200);
-
                         $(this).css({
                             "display" : "block"
                         });
 
-                        // var activeTabHeight = $(this).height();
-
-                        // $(this).closest(".tabs-content").delay(150).animate({
-                        //     "height" : activeTabHeight + "px"
-                        // }, 300);
-
                     } else {
-
-                        // $(this).fadeOut(200);
 
                         $(this).css({
                             "display" : "none"
@@ -234,7 +236,7 @@ $(document).ready(function() {
 
     $(function() {
 
-        var activeTabName;
+        // var activeTabName;
 
         $(".tabs_2").each(function() {
 
@@ -282,7 +284,7 @@ $(document).ready(function() {
 
             if( !$(this).hasClass("active") ) {
 
-                var parentBlock = $(this).closest(".tabs_2");
+                parentBlock = $(this).closest(".tabs_2");
 
                 activeTabName = $(this).attr("for");
 
@@ -318,7 +320,7 @@ $(document).ready(function() {
 
     $(function() {
 
-        var slidingBox;
+        // var slidingBox;
 
         $(".sliding-block_wrapp").each(function() {
 
@@ -478,7 +480,7 @@ $(document).ready(function() {
 
             parentBlock = $(this).closest(".direction-tabs");
 
-            var tabsNav = parentBlock.find(".tabs-nav_wrapp");
+            tabsNav = parentBlock.find(".tabs-nav_wrapp");
 
             if( tabsNav.hasClass("active") ) {
 
@@ -496,11 +498,14 @@ $(document).ready(function() {
 
     function getTitleParams() {
 
+        var shapeH;
+        var hTitle;
+
         $(".h2").each(function() {
 
-            var shapeH = $(this).find(".shape");
+            shapeH = $(this).find(".shape");
 
-            var hTitle = $(this).find("h2");
+            hTitle = $(this).find("h2");
 
             shapeH.css({
                 "width" : ( $(this).width() - hTitle.outerWidth() ) / 2 + "px"
@@ -555,9 +560,7 @@ $(document).ready(function() {
 
         } else {
 
-            $(".wrapper").css({
-                "padding-top" : 0
-            });
+
 
             $(".main_slider .slide").css({
                 "padding-top" : 0
@@ -571,6 +574,14 @@ $(document).ready(function() {
             $(".dropdown-menu").attr('style', "");
 
             $(".dropdown-btn").removeClass("active");
+
+            if( $(".main_slider").length > 0 && $(".main_slider").offset().top <= $("#header_site").height() ) {
+                $("#header_site").removeClass("light");
+            }
+
+            $(".wrapper").css({
+                "padding-top" : 0
+            });
 
         }
 
