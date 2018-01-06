@@ -21,10 +21,10 @@
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-<!-- 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 
 	<title>Минское</title>
 
@@ -36,7 +36,7 @@
 
 	<!-- Header -->
 		
-	<header>
+	<header id="header_site">
 
 		<div class="header-site">
 
@@ -44,11 +44,19 @@
 				<div class="inner-row offset-ziro">
 					<div class="col col-1">
 						<a href="#" class="logo">
-							<img src="img/logo.png" alt="" />
+							<img class="logo-main" src="img/logo.png" alt="" />
+							<img class="logo-inner" src="img/logo_inner.png" alt="" />
 						</a>
 					</div>
 					<div class="col col-2">
-						<div class="main-nav">
+						<div class="respmenubtn-box">
+							<button class="respmenubtn">		
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="main-nav scroll">
 							<div class="menu-item">
 								<a href="#" class="item-txt">Главная</a>
 							</div>
@@ -105,7 +113,7 @@
 
 				<!-- Section 1 - Main Page -->
 
-				<section class="main-slider_sect">
+				<section class="main-slider_sect main_slider">
 
 					<div class="main-slider_wrapp">
 
@@ -316,16 +324,46 @@
 											<div class="slider-2">
 												
 												<div class="slide single-thumb">
+
+													<h3>Свежие новости</h3>
+													<a href="#">
+														<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
+
+														<p class="date">7.12.2017</p>
+
+														<div class="img-box">
+															<img src="img/slider_2_photo.jpg" alt="" />
+														</div>
+													</a>
+												</div>
+
+												<div class="slide single-thumb">
+													
+													<h3>Свежие новости</h3>
+													<a href="#">
+														<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
+
+														<p class="date">7.12.2017</p>
+
+														<div class="img-box">
+															<img src="img/slider_2_photo.jpg" alt="" />
+														</div>
+													</a>
+												</div>
+
+												<div class="slide single-thumb">
 													
 													<h3>Свежие новости</h3>
 
-													<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
+													<a href="#">
+														<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
 
-													<p class="date">7.12.2017</p>
+														<p class="date">7.12.2017</p>
 
-													<div class="img-box">
-														<img src="img/slider_2_photo.jpg" alt="" />
-													</div>
+														<div class="img-box">
+															<img src="img/slider_2_photo.jpg" alt="" />
+														</div>
+													</a>
 
 												</div>
 
@@ -333,41 +371,15 @@
 													
 													<h3>Свежие новости</h3>
 
-													<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
+													<a href="#">
+														<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
 
-													<p class="date">7.12.2017</p>
+														<p class="date">7.12.2017</p>
 
-													<div class="img-box">
-														<img src="img/slider_2_photo.jpg" alt="" />
-													</div>
-
-												</div>
-
-												<div class="slide single-thumb">
-													
-													<h3>Свежие новости</h3>
-
-													<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
-
-													<p class="date">7.12.2017</p>
-
-													<div class="img-box">
-														<img src="img/slider_2_photo.jpg" alt="" />
-													</div>
-
-												</div>
-
-												<div class="slide single-thumb">
-													
-													<h3>Свежие новости</h3>
-
-													<p>Продукция холдинга “Минское” получила пять золотых медалей в рамках Kazakhstan International Halal Expo 2017</p>
-
-													<p class="date">7.12.2017</p>
-
-													<div class="img-box">
-														<img src="img/slider_2_photo.jpg" alt="" />
-													</div>
+														<div class="img-box">
+															<img src="img/slider_2_photo.jpg" alt="" />
+														</div>
+													</a>
 
 												</div>
 

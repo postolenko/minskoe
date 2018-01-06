@@ -1,6 +1,10 @@
-ymaps.ready(init);
-var myMap,
-    myPlacemark;
+if( $(".map-box").length > 0 ) {
+
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+}
 
 function init(){   
     myMap = new ymaps.Map("map", {

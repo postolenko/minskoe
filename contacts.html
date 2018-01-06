@@ -21,11 +21,11 @@
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 	<title>Минское</title>
 
@@ -37,7 +37,7 @@
 
 	<!-- Header -->
 		
-	<header class="light">
+	<header id="header_site">
 
 		<div class="header-site">
 
@@ -50,7 +50,14 @@
 						</a>
 					</div>
 					<div class="col col-2">
-						<div class="main-nav">
+						<div class="respmenubtn-box">
+							<button class="respmenubtn">		
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="main-nav scroll">
 							<div class="menu-item">
 								<a href="#" class="item-txt">Главная</a>
 							</div>
@@ -163,11 +170,11 @@
 											</div>
 											<div class="form-col">
 												<label>E-mail:</label>
-												<input type="email" placeholder="Имя" />
+												<input type="email" placeholder="Email" />
 											</div>
 											<div class="form-col">
 												<label>Телефон:</label>
-												<input type="tel" placeholder="Имя" />
+												<input class="phone" type="tel" placeholder="Тел" />
 											</div>
 											<div class="form-row">
 												<label>Соббщение:</label>

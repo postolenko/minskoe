@@ -86,7 +86,6 @@ body {
 
 .wrapper {
     width: 100%;
-    min-width: 1182px;
     position: relative;
     min-height: 100vh;
     display: -webkit-box;
@@ -245,14 +244,13 @@ h1 + p {
 h2 {
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 36px;
-    line-height: 61px;
+    line-height: 42px;
     font-weight: 300;
     color: #2c1b08;
 }
 
 .h2 {
-    /*margin: 18px 0;*/
-    margin: 28px 0 20px 0;
+    margin: 39px 0 27px 0;
     position: relative;
     text-align: center;
 }
@@ -513,7 +511,6 @@ a.green-pill.big,
 button.green-pill.big {
     min-width: 227px;
     padding: 14px 1% 9px 1%;
-    background: #82ba43;
     font-size: 16px;
     line-height: 26px;
 }
@@ -812,15 +809,15 @@ button.green-pill.big {
 
 .header-site {
     width: 100%;
-    padding: 25px 0 0 10px;
+    padding: 25px 0 0 0;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 6;
 }
 
 .light .header-site {
-    padding: 16px 0 17px 10px;
+    padding: 16px 0 17px 0;
 }
 
 
@@ -890,7 +887,6 @@ button.green-pill.big {
 
 .menu-item .wt-tr {
     /*display: block;*/
-    /*opacity: 0;*/
     display: none;
     content: "";
     width: 15px;
@@ -904,34 +900,17 @@ button.green-pill.big {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
-/*    -webkit-transition-property: opacity;
-    -webkit-transition-duration: .3s;
-    -webkit-transition-timing-function: ease;
-
-    -moz-transition-property: opacity;
-    -moz-transition-duration: .3s;
-    -moz-transition-timing-function: ease;
-
-    -ms-transition-property: opacity;
-    -ms-transition-duration: .3s;
-    -ms-transition-timing-function: ease;
-
-    -o-transition-property: opacity;
-    -o-transition-duration: .3s;
-    -o-transition-timing-function: ease;
-
-    transition-property: opacity;
-    transition-duration: .3s;
-    transition-timing-function: ease;*/
 }
 
 .menu-item.active .wt-tr {
-    /*opacity: 1;*/
     display: block;
 }
 
+.menu-item:hover {
+    z-index: 2;
+}
+
 .menu-item:hover .wt-tr {
-    /*opacity: 1;*/
     display: block;
 }
 
@@ -988,6 +967,7 @@ button.green-pill.big {
     position: absolute;
     top: 5px;
     right: 1px;
+    overflow: hidden;
     -webkit-transition-property: transform;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -1044,9 +1024,8 @@ button.green-pill.big {
 
 .dropdown-menu > .inner {
     background: #ffffff;
-    padding: 12px 19px 14px 19px;
+    padding: 15px 19px 14px 19px;
     text-align: left;
-    padding-top: 15px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1109,13 +1088,18 @@ button.green-pill.big {
 .contacts-list li {
     display: inline-block;
     vertical-align: top;
-    padding-left: 8%;
+    padding: 1px 0 1px 8%;
+}
+
+.contacts-list li i {
+    position: relative;
+    top: 2px;
 }
 
 .contacts-list li a {
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 16px;
     font-weight: bold;
     color: #ffffff;
 }
@@ -1159,6 +1143,7 @@ button.green-pill.big {
 
 .light .header-site {
     position: relative;
+    background: #ffffff;
     border-bottom: 1px solid #ececec;
 }
 
@@ -1185,6 +1170,15 @@ button.green-pill.big {
      color: #313131;
 }
 
+.light .dropdown-menu ul li a:hover {
+    color: #86bc49;
+}
+
+.light .dropdown-menu ul li a:active,
+.light .dropdown-menu ul li a.active {
+    color: #86bc49;
+}
+
 .light .contacts-list li a:link span,
 .light .contacts-list li a:visited span {
      color: #313131;
@@ -1203,6 +1197,106 @@ button.green-pill.big {
 .light .contacts-list li a:hover span {
     color: #86bc49;
 }
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn-box {
+    /*display: block;*/
+    display: none;
+    width: 50px;
+    height: 48px;
+    text-align: center;
+    border: none;
+    z-index: 5;
+}
+
+.respmenubtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    margin: 6px 0 0 0;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 27px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto 7px auto;
+
+    -webkit-transition-property: transform, border, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, border, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, border, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, border, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, border, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.light .respmenubtn span {
+    background: rgb(49, 49, 49);
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    background: rgb(134, 188, 71);
+}
+
+.respmenubtn.active span {
+    position: relative;
+    width: 35px;
+    top: 1px;
+    left: -2px;
+    background: rgb(134, 188, 71);
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 3px;
+    left: -1px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -1247,6 +1341,7 @@ button.green-pill.big {
     content: "";
     height: 100vh;
     width: 1%;
+    margin: 0 0 0 -1%;
 }
 
 .main-slider .slide-desc {
@@ -1255,14 +1350,13 @@ button.green-pill.big {
     width: 98%;
     max-width: 590px;
     position: relative;
-    left: -1%;
 }
 
 .main-slider .slide-desc h2 {
-    padding-bottom: 15px;
+    padding-bottom: 23px;
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 40px;
-    line-height: 61px;
+    line-height: 47px;
     font-weight: bold;
     color: #ffffff;
 }
@@ -1464,13 +1558,14 @@ button.green-pill.big {
 }
 
 .thumbnails-3 {
-    margin: 21px 0;
+    margin: 15px -4%;
 }
 
 .thumb-3 {
     display: inline-block;
     vertical-align: top;
     width: 25%;
+    padding: 6px 4%;
 }
 
 .thumb-3 p {
@@ -1616,7 +1711,7 @@ button.green-pill.big {
 }
 
 .thumb-4 .inner {
-     display: inline-block;
+    display: inline-block;
     vertical-align: top;
 }
 
@@ -1661,11 +1756,11 @@ button.green-pill.big {
 
 /*-- Section 2 - About Page --*/
 
-.thumbnails-4 {
-
+.thumbnails-ab {
+    margin: 0 -2%;
 }
 
-.thumb-4 {
+.thumb-ab {
     display: inline-table;
     vertical-align: top;
     width: 50%;
@@ -1674,28 +1769,29 @@ button.green-pill.big {
     text-align: left;
 }
 
-.thumb-4-col-1 {
+.thumb-ab-col-1 {
     display: table-cell;
     vertical-align: middle;
     width: 248px;
     padding: 0 2%;
 }
 
-.thumb-4-col-2 {
+.thumb-ab-col-2 {
     display: table-cell;
     vertical-align: middle;
     width: auto;
 }
 
-.thumb-4-col-1 .img-box {
-    width: 204px;
+.thumb-ab-col-1 .img-box {
+    width: 100%;
+    max-width: 204px;
     height: 204px;
     overflow: hidden;
     position: relative;
     background: #e8e8e8;
 }
 
-.thumb-4-col-1 .img-box img {
+.thumb-ab-col-1 .img-box img {
     display: block;
     width: auto;
     height: auto;
@@ -1710,7 +1806,7 @@ button.green-pill.big {
     transform: translate(-50%, -50%);
 }
 
-.thumb-4 p {
+.thumb-ab p {
     padding: 2px 0;
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 15px;
@@ -1719,7 +1815,7 @@ button.green-pill.big {
     color: #000000;
 }
 
-.thumb-4 p.p-1 {
+.thumb-ab p.p-1 {
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 18px;
     line-height: 20px;
@@ -1727,17 +1823,17 @@ button.green-pill.big {
     color: #2c1b08;
 }
 
-.thumb-4 p.grey {
+.thumb-ab p.grey {
     font-size: 15px;
     line-height: 20px;
     color: #6a6a6a;
 }
 
-.thumb-4 .thumb-list {
+.thumb-ab .thumb-list {
     padding: 7px 0;
 }
 
-.thumb-4 .thumb-list li {
+.thumb-ab .thumb-list li {
     padding: 0;
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 15px;
@@ -1746,7 +1842,7 @@ button.green-pill.big {
     color: #000000;
 }
 
-.thumb-4 .thumb-list li a {
+.thumb-ab .thumb-list li a {
     padding: 0;
     font-family: "Circe", Arial, Verdana, sans-serif;
     font-size: 15px;
@@ -1755,17 +1851,17 @@ button.green-pill.big {
     color: #000000;
 }
 
-.thumb-4 .thumb-list li a:link,
-.thumb-4 .thumb-list li a:visited {
+.thumb-ab .thumb-list li a:link,
+.thumb-ab .thumb-list li a:visited {
     color: #000000;
 }
 
-.thumb-4 .thumb-list li a:active,
-.thumb-4 .thumb-list li a.active {
+.thumb-ab .thumb-list li a:active,
+.thumb-ab .thumb-list li a.active {
     color: #86bc49;
 }
 
-.thumb-4 .thumb-list li a:hover {
+.thumb-ab .thumb-list li a:hover {
     color: #86bc49;
 }
 
@@ -1989,6 +2085,29 @@ input {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+input:focus {
+    border: 1px solid #86bc49;
 }
 
 textarea {
@@ -2006,6 +2125,29 @@ textarea {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: all;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: all;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: all;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+textarea:focus {
+    border: 1px solid #86bc49;
 }
 
 .checkbox {
@@ -2075,6 +2217,7 @@ textarea {
     float: left;
     padding-top: 13px;
     padding-right: 2%;
+    position: relative;
 }
 
 .direction-tabs .col-2 {
@@ -2082,6 +2225,10 @@ textarea {
     float: right;
     padding-left: 3%;
     padding-right: 2%;
+}
+
+.tabs-nav_wrapp {
+    position: relative;
 }
 
 .tabs-nav {
@@ -2253,9 +2400,26 @@ textarea {
     color: #2c1b08;
 }
 
+.tab-nav_btn {
+    /*display: inline-block;*/
+    display: none;
+    vertical-align: top;
+    position: absolute;
+    top: -42px;
+    left: 0;
+}
+
+.tab-nav_btn:before {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'FontAwesome';
+    content: "\f053";
+    position: relative;
+    left: -10px;
+}
+
 .tabs-content {
-    /*position: relative;*/
-    /*overflow: hidden;*/
+    padding-left: 20px;
 }
 
 .tabs-content .tab {
@@ -2275,7 +2439,8 @@ textarea {
 
 .thumbnails-5 {
     max-width: 700px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin: 0 -1%;
 }
 
 .thumb-5 {
@@ -2283,7 +2448,7 @@ textarea {
     vertical-align: top;
     width: 50%;
     margin: 11px 0;
-    padding: 0 20px;
+    padding: 0 1%;
 }
 
 .thumb-5 h3 {
@@ -2520,11 +2685,11 @@ input.tabradio:checked + .tab_2-tab {
 }
 
 .header-col-2 .inner-col-1 {
-    width: 50%;
+    width: 60%;
 }
 
 .header-col-2 .inner-col-2 {
-    width: 50%;
+    width: 40%;
     text-align: right;
 }
 

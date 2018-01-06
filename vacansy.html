@@ -21,10 +21,10 @@
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 	<title>Минское</title>
 
@@ -36,7 +36,7 @@
 
 	<!-- Header -->
 		
-	<header class="light">
+	<header id="header_site">
 
 		<div class="header-site">
 
@@ -331,7 +331,7 @@
 									</div>
 									<div class="form-row">
 										<label>Телефон::</label>
-										<input type="text" placeholder="+7 ( ___ ) ___ - __ - __">
+										<input class="phone" type="tel" placeholder="+7 ( ___ ) ___ - __ - __" />
 									</div>
 									<div class="form-row">
 										<div class="upload-block">

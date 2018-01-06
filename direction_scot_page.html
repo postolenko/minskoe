@@ -21,10 +21,10 @@
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/parallax.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 	<title>Минское</title>
 
@@ -36,7 +36,7 @@
 
 	<!-- Header -->
 		
-	<header class="light">
+	<header id="header_site">
 
 		<div class="header-site">
 
@@ -121,7 +121,8 @@
 						<h1>Животноводство</h1>
 						
 						<div class="direction-tabs clearfix">
-							<div class="col-1">
+							<button type="button" class="tab-nav_btn green-pill">Меню</button>
+							<div class="col-1 tabs-nav_wrapp scroll_y">
 								<ul class="tabs-nav tabs_1-nav" data-tabs-nav = "tabs_1">
 									<li>
 										<a href="#" class="tab-link" data-tab-link = "tab_1">
@@ -132,10 +133,7 @@
 											<span>Животноводство</span>
 										</a>
 										<div class="slidedown_wrapp">
-											<ul>
-												<li><a href="#" class="active">Черно-пестрая порода (молодняк)</a></li>
-												<li><a href="#">Костромская порода (молодняк)</a></li>
-											</ul>
+											<p>Черно-пестрая порода (молодняк) Костромская порода (молодняк)</p>
 										</div>
 									</li>
 									<li>
@@ -147,10 +145,7 @@
 											<span>Производство молока</span>
 										</a>
 										<div class="slidedown_wrapp">
-											<ul>
-												<li><a href="#" class="active">Черно-пестрая порода (молодняк)</a></li>
-												<li><a href="#">Костромская порода (молодняк)</a></li>
-											</ul>
+											<p>Черно-пестрая порода (молодняк) Костромская порода (молодняк)</p>
 										</div>
 									</li>
 									<li>
@@ -162,10 +157,7 @@
 											<span>Растениеводство</span>
 										</a>
 										<div class="slidedown_wrapp">
-											<ul>
-												<li><a href="#" class="active">Черно-пестрая порода (молодняк)</a></li>
-												<li><a href="#">Костромская порода (молодняк)</a></li>
-											</ul>
+											<p>Черно-пестрая порода (молодняк) Костромская порода (молодняк)</p>
 										</div>
 									</li>
 									<li>
@@ -177,13 +169,10 @@
 											<span>Производство овощей</span>
 										</a>
 										<div class="slidedown_wrapp">
-											<ul>
-												<li><a href="#" class="active">Черно-пестрая порода (молодняк)</a></li>
-												<li><a href="#">Костромская порода (молодняк)</a></li>
-											</ul>
+											<p>Черно-пестрая порода (молодняк) Костромская порода (молодняк)</p>
 										</div>
 									</li>
-								</ul>
+								</ul>								
 							</div>
 							<div class="col-2">
 								<div class="tabs-content" data-tabs = "tabs_1">
