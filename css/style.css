@@ -513,6 +513,18 @@ button.green-pill.big {
     line-height: 13px;
 }
 
+.back-link:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+    content: "\f104";
+    font-family: 'FontAwesome';
+    font-size: 13px;
+    line-height: 13px;
+}
+
 /*-- /Links --*/
 
 /*-- Icons --*/
@@ -722,6 +734,11 @@ button.green-pill.big {
     background-position: center;
 }
 
+.cow.big {
+    width: 54px;
+    height: 45px;
+}
+
 .cow.active {
     background-image: url(../img/cow_active.svg);
 }
@@ -735,6 +752,11 @@ button.green-pill.big {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+}
+
+.milk.big {
+    width: 54px;
+    height: 59px;
 }
 
 .milk.active {
@@ -752,6 +774,11 @@ button.green-pill.big {
     background-position: center;
 }
 
+.corn.big {
+    width: 54px;
+    height: 54px;
+}
+
 .corn.active {
     background-image: url(../img/corn_active.svg);
 }
@@ -765,6 +792,11 @@ button.green-pill.big {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+}
+
+.vegetables.big {
+    width: 54px;
+    height: 52px;
 }
 
 .vegetables.active {
@@ -1534,6 +1566,11 @@ textarea:focus {
     max-width: 296px;
 }
 
+.thumb-2-desc i {
+    display: none;
+    margin: 0 0 20px 0;
+}
+
 .thumb-2-desc h3 {
     padding-bottom: 21px;
 }
@@ -2265,7 +2302,8 @@ p.icon-p a:hover {
     display: table-cell;
     vertical-align: top;
     width: 66px;
-    padding: 0 0 0 13%;
+    padding: 0 0 0 10px;
+    text-align: center;
 }
 
 .tabs-nav li .tab-link i {
@@ -2349,8 +2387,7 @@ p.icon-p a:hover {
     color: #2c1b08;
 }
 
-button.tab-nav_btn {
-    /*display: inline-block;*/
+/*button.tab-nav_btn {
     display: none;
     vertical-align: top;
     position: absolute;
@@ -2365,7 +2402,7 @@ button.tab-nav_btn {
     content: "\f053";
     position: relative;
     left: -10px;
-}
+}*/
 
 .tabs-content {
     padding-left: 20px;
@@ -2381,8 +2418,8 @@ button.tab-nav_btn {
 }
 
 .thumbnails-5 {
-    max-width: 700px;
-    margin: 0 -1%;
+    /*max-width: 700px;*/
+    margin: 0 -2%;
 }
 
 .thumb-5 {
@@ -2390,7 +2427,7 @@ button.tab-nav_btn {
     vertical-align: top;
     width: 50%;
     margin: 11px 0;
-    padding: 0 1%;
+    padding: 0 2%;
 }
 
 .thumb-5 h3 {
@@ -2414,8 +2451,6 @@ button.tab-nav_btn {
     display: block;
     width: auto;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
