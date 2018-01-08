@@ -6,6 +6,10 @@
 
 	/*-- Header --*/
 
+	.light .header-site {
+	    padding: 7px 0 8px 0;
+	}
+
 	.header-site .col-1 {
 	    width: 18%;
 	}
@@ -16,6 +20,18 @@
 
 	.header-site .col-3 {
 	    width: 27%;
+	}
+
+	.header-site .col-2 {
+	    width: 53%;
+	}
+
+	.header-site .col-3 {
+	    width: 29%;
+	}
+
+	.contacts-list li {
+	    padding: 3px 0 3px 9%;
 	}
 
 	/*-- /Header --*/
@@ -48,7 +64,7 @@
 
 	/*-- Header --*/
 
-	.header-site .col-2 {
+/*	.header-site .col-2 {
 	    width: 68%;
 	}
 
@@ -58,14 +74,11 @@
 
 	.contacts-list li {
 	    padding: 3px 0 3px 19%;
-	}
+	}*/
 
-	.contacts-list li a i {
-		display: block;
-	}
-
-	.contacts-list li a span {
-		display: none;
+	.menu-item {
+	    margin: 5px 0 5px 9px;
+	    padding-right: 14px;
 	}
 
 	/*-- /Header --*/
@@ -140,78 +153,6 @@
 	    padding: 0 14px;
 	}
 
-	/*-- Section 2 - Main Page --*/
-
-	.thumb-2 {
-	    width: 100%;
-	}
-
-	.thumbnails-2 .thumb-2:nth-child(odd) {
-	    padding-right: 0;
-	}
-
-	.thumbnails-2 .thumb-2:nth-child(even) {
-	    padding-left: 0;
-	}
-
-	.two-cols-templ .col-1 {
-		width: 100%;
-	    padding-right: 0;
-	}
-
-	.two-cols-templ .col-2 {
-	    width: 100%;
-	}
-
-	/*-- /Section 2 - Main Page --*/
-
-	/*-- Section 1 - Contacts Page --*/
-
-	.contacts-templ .col-1 {
-	    width: 100%;
-	    float: none;
-	    padding-right: 0;
-	}
-
-	.contacts-templ .col-2 {
-	    width: 100%;
-	    float: none;
-	    padding-left: 0;
-	}
-
-	/*-- /Section 1 - Contacts Page --*/
-
-	/*-- Section 1 - Direction Scot --*/
-
-	.direction-tabs {
-		width: 100%;
-		margin: 10px 0;
-	}
-
-	.direction-tabs .col-1 {
-		width: 100%;
-		margin: 0 0 40px 0;
-	}
-
-	.direction-tabs .col-2 {
-		width: 100%;
-	}
-
-	/*-- /Section 1 - Direction Scot --*/
-
-}
-
-@media only screen and (max-width: 768px) {
-
-	h1 {
-	    font-size: 30px;
-	    line-height: 35px;
-	}
-
-	h2 {
-	    font-size: 32px;
-	    line-height: 35px;
-	}
 
 	/*-- Header --*/
 
@@ -243,10 +184,6 @@
 	.header-site .col-3 {
 		display: none;
 	    width: 0;
-	}
-
-	.logo {
-	    max-width: 113px;
 	}
 
 	.respmenubtn-box {
@@ -351,6 +288,87 @@
 
 	.contacts-list li {
 	    padding-left: 5%;
+	}
+
+	/*-- /Header --*/
+
+	/*-- Section 2 - Main Page --*/
+
+	.thumb-2 {
+	    width: 100%;
+	}
+
+	.thumbnails-2 .thumb-2:nth-child(odd) {
+	    padding-right: 0;
+	}
+
+	.thumbnails-2 .thumb-2:nth-child(even) {
+	    padding-left: 0;
+	}
+
+	.two-cols-templ .col-1 {
+		width: 100%;
+	    padding-right: 0;
+	}
+
+	.two-cols-templ .col-2 {
+	    width: 100%;
+	}
+
+	/*-- /Section 2 - Main Page --*/
+
+	/*-- Section 1 - Contacts Page --*/
+
+	.contacts-templ .col-1 {
+	    width: 100%;
+	    float: none;
+	    padding-right: 0;
+	}
+
+	.contacts-templ .col-2 {
+	    width: 100%;
+	    float: none;
+	    padding-left: 0;
+	}
+
+	/*-- /Section 1 - Contacts Page --*/
+
+	/*-- Section 1 - Direction Scot --*/
+
+	.direction-tabs {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.direction-tabs .col-1 {
+		width: 100%;
+		margin: 0 0 40px 0;
+	}
+
+	.direction-tabs .col-2 {
+		width: 100%;
+	}
+
+	/*-- /Section 1 - Direction Scot --*/
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	h1 {
+	    font-size: 30px;
+	    line-height: 35px;
+	}
+
+	h2 {
+	    font-size: 32px;
+	    line-height: 35px;
+	}
+
+	/*-- Header --*/
+
+	.logo {
+	    max-width: 113px;
 	}
 
 	/*-- /Header --*/
@@ -490,6 +508,18 @@
 	/*-- /Section 1 - About Page --*/
 
 	/*-- Section 1 - About Page --*/
+
+	/*-- Header --*/
+
+	.contacts-list li a i {
+		display: block;
+	}
+
+	.contacts-list li a span {
+		display: none;
+	}
+
+	/*-- /Header --*/
 
 /*	.direction-tabs {
 		margin: 54px 0 10px 0;
@@ -774,7 +804,7 @@
 
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 901px) {
 
 	.main-nav {
 		display: block !important;

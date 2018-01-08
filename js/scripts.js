@@ -388,7 +388,7 @@ $(document).ready(function() {
 
         $(".dropdown-btn").click(function() {
 
-            if( bodyWidth <= 768 ) {
+            if( bodyWidth <= 900 ) {
 
                 parentBlock = $(this).closest(".menu-item");
 
@@ -426,7 +426,7 @@ $(document).ready(function() {
 
                 $(this).addClass("active");
 
-                if( bodyWidth <= 768 &&
+                if( bodyWidth <= 900 &&
                     $(".main_slider").length > 0 &&
                     $(".main_slider").offset().top == 0 &&
                     $(".header-site").offset().top == 0 ) {
@@ -446,7 +446,7 @@ $(document).ready(function() {
 
                 $(this).removeClass("active");
 
-                if( bodyWidth <= 768 &&
+                if( bodyWidth <= 900 &&
                     $(".main_slider").length > 0 &&
                     $(".main_slider").offset().top == 0 &&
                     $(".header-site").offset().top == 0 ) {
@@ -516,7 +516,7 @@ $(document).ready(function() {
 
     function getRespParams() {
 
-        if( bodyWidth <= 768 && $(".main_slider").length > 0 ) {
+        if( bodyWidth <= 900 && $(".main_slider").length > 0 ) {
 
             if( $(".header-site").offset().top > $(".main_slider").offset().top ) {
 
@@ -530,7 +530,7 @@ $(document).ready(function() {
 
         } else {
 
-            if( bodyWidth <= 768 ) {
+            if( bodyWidth <= 900 ) {
 
                 $(".wrapper").css({
                     "padding-top" : $(".header-site").height()+ "px"
@@ -546,7 +546,7 @@ $(document).ready(function() {
 
         }
 
-        if( bodyWidth <= 768 ) {
+        if( bodyWidth <= 900 ) {
 
             $(".main_slider .slide").css({
                 "padding-top" : $(".header-site").height() + "px"

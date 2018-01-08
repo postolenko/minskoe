@@ -9,14 +9,14 @@ $(window).load(function() {
     if(bodyWidth  <= 768) {
 
         $(".scroll").mCustomScrollbar();
-        $(".scroll_y").mCustomScrollbar({
-            axis:"y"
-        });
+        // $(".scroll_y").mCustomScrollbar({
+        //     axis:"y"
+        // });
 
     } else {
 
         $(".scroll").mCustomScrollbar("destroy");
-        $(".scroll_y").mCustomScrollbar("destroy");
+        // $(".scroll_y").mCustomScrollbar("destroy");
 
     }
 
@@ -33,14 +33,14 @@ $(window).resize(function() {
     if(bodyWidth  <= 768) {
 
         $(".scroll").mCustomScrollbar();
-        $(".scroll_y").mCustomScrollbar({
-            axis:"y"
-        });
+        // $(".scroll_y").mCustomScrollbar({
+        //     axis:"y"
+        // });
 
     } else {
 
         $(".scroll").mCustomScrollbar("destroy");
-        $(".scroll_y").mCustomScrollbar("destroy");
+        // $(".scroll_y").mCustomScrollbar("destroy");
 
     }
 
