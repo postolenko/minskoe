@@ -115,5 +115,11 @@ $(document).ready(function() {
           ]
     });
 
+    $(".tabs_container").each(function() {
+
+        $(this).easytabs();
+
+    });    
+
 });
 
